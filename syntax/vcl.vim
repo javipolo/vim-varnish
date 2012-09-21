@@ -60,12 +60,14 @@ syn match  vclOption   /server\.\(ip\|port\)/
 syn match  vclOption   /req\.\(hash\|request\|url\|proto\|backend\.healthy\|backend\|grace\|xid\|restarts\)/
 " bereq.
 syn match  vclOption   /bereq\.\(request\|url\|proto\|connect_timeout\|first_byte_timeout\|between_bytes_timeout\)/
+" beresp.
+syn match  vclOption   /bereq\.\(do_stream\|do_esi\|do_gzip\|do_gunzip\|proto\|status\|response\|ttl\|grace\|saintmode\|backend\.name\|backend\.ip\|backend\.port\|storage\)/
 " obj
 syn match  vclOption   /obj\.\(proto\|status\|response\|cacheable\|ttl\|lastuse\|hits\|hash\|grace\|prefetch\)/
 " resp
 syn match  vclOption   /resp\.\(proto\|status\|response\)/
 " common: http.HEADERNAME
-syn match  vclOption   /\(req\|bereq\|resp\|obj\)\.http\.[A-Za-z][-_A-Za-z0-9]*/
+syn match  vclOption   /\(req\|bereq\|resp\|beresp\|obj\)\.http\.[A-Za-z][-_A-Za-z0-9]*/
 
 " Highlight the C block
 syn include @vclC syntax/c.vim
